@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: url(../Images/cursor.png), auto;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(14, 14, 14);
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+header {
+  margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  z-index: 998;
+  background-color: rgb(14, 14, 14);
+}
+/* Navbar start */
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+  gap: 70px;
+  margin: 0 auto;
+  width: 90%;
+
+}
+
+.sidelist {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 17px;
+
+}
+
+.sideListA {
+  font-family: Anton-regular;
+  letter-spacing: 2px;
+  width: 50%;
+}
+
+i {
+  font-size: 1.4em;
+  color: greenyellow;
+}
+
+.fa-bars {
+  position: absolute;
+  color: greenyellow;
+  right: 30px;
+  transition: 0.6s;
+}
+
+.fa-bars:hover {
+  transform: rotate(180deg);
+}
+
+/* Logo */
+.logo {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.logo {
+  --text-stroke-color: greenyellow;
+  --animation-color: greenyellow;
+  --fs-size: 2.5em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  font-family: AeroviasBrasilNF;
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.7s;
+  -webkit-text-stroke: 1px var(--animation-color);
+  font-family: AeroviasBrasilNF;
+}
+
+.logo:hover .hover-text {
+  width: 100%;
+  font-family: AeroviasBrasilNF;
+}
+
+/* Sliderbar Menu */
+.sidebarMenu {
+  width: 0;
+  height: 100vh;
+  background-color: #171718;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 80px;
+  transition: 0.5s;
+  overflow-x: hidden;
+  position: absolute;
+}
+
+.fa-image,
+.fa-laptop,
+.fa-user,
+.fa-inbox {
+  font-size: 1.3em;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+  color: greenyellow;
+  transition: 0.6s;
+}
+.closeBtn:hover {
+  transform: rotate(180deg);
+  filter: drop-shadow(0 0 20px greenyellow);
+}
+
+/* Gallery Section */
+.gallerySection {
+  width: 0;
+  height: 100vh;
+  background: rgb(14, 14, 14);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 80px;
+  transition: 0.8s;
+  overflow-x: hidden;
+}
+
+.galleryCloseBtn {
+  position: absolute;
+  font-size: 3em;
+  top: 20px;
+  right: 30px;
+  color: greenyellow;
+}
+
+.galleryHeadline {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Projects Section */
+.projectsSection {
+  width: 0;
+  height: 100vh;
+  background: rgb(14, 14, 14);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 80px;
+  transition: 0.8s;
+  overflow-x: hidden;
+}
+
+.projectsCloseBtn {
+  position: absolute;
+  font-size: 3em;
+  top: 20px;
+  right: 30px;
+  color: greenyellow;
+}
+
+.projectsHeadline {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* About Section */
+.aboutSection {
+  width: 0;
+  height: 100vh;
+  background: rgb(14, 14, 14);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 80px;
+  transition: 0.8s;
+  overflow-x: hidden;
+}
+
+.aboutCloseBtn {
+  position: absolute;
+  font-size: 3em;
+  top: 20px;
+  right: 30px;
+  color: greenyellow;
+}
+
+.aboutHeadline {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contact Section */
+.contactSection {
+  width: 0;
+  height: 100vh;
+  background: rgb(14, 14, 14);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 80px;
+  transition: 0.8s;
+  overflow-x: hidden;
+}
+
+.contactCloseBtn {
+  position: absolute;
+  font-size: 3em;
+  top: 20px;
+  right: 30px;
+  color: greenyellow;
+}
+
+.contactHeadline {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Services Section */
+.servicesSection {
+  width: 0;
+  height: 100vh;
+  background: rgb(14, 14, 14);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 80px;
+  transition: 0.8s;
+  overflow-x: hidden;
+}
+
+.servicesCloseBtn {
+  position: absolute;
+  font-size: 3em;
+  top: 20px;
+  right: 30px;
+  color: greenyellow;
+}
+
+.servicesHeadline {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Pricing Section */
+
+.pricingSection {
+  width: 0;
+  height: 100vh;
+  background: rgb(14, 14, 14);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 80px;
+  transition: 0.8s;
+  overflow-x: hidden;
+}
+
+.pricingCloseBtn {
+  position: absolute;
+  font-size: 3em;
+  top: 20px;
+  right: 30px;
+  color: greenyellow;
+}
+
+.pricingHeadline {
+  font-size: 4em;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Section */
+main {
+  height: 100vh;
+}
+.mainSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Main Section Box */
+
+.mainSectionBox {
+  height: 55vh;
+  width: 92%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: transparent;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3em;
+  -webkit-text-stroke: 1px white;
+  transition: 0.6s all;
+}
+h1:hover {
+  color: white;
+}
+
+.alyvText {
+  color: transparent;
+  -webkit-text-stroke: 1px #adff2f;
+}
+
+/* Typing Animation */
+#typing-animation {
+  width: 35%;
+  margin-bottom: 30px;
+  font-size: 1.4em;
+  font-family: Anton-regular;
+  color: greenyellow;
+  letter-spacing: 1px;
+}
+
+#typing-animation:after {
+  content: "|";
+  color: #adff2f;
+}
+
+/* Paragraph */
+.paragraph {
+  display: flex;
+}
+
+.paragraph p {
+  font-size: 1.4em;
+  margin-right: 5px;
+  font-family: Anton-regular;
+  letter-spacing: 1px;
+}
+
+/* My Image */
+.myImage {
+  width: 370px;
+}
+
+
+/* Main Button */
+.mainBtn {
+  transition: 0.4s;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: greenyellow;
+  color: #171718;
+  letter-spacing: 1px;
+}
+
+.mainBtn:hover {
+  color: greenyellow;
+  background-color: #171718;
+
+}
+
+/* Services Section */
+.servicesSectionBox {
+  width: 92%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service {
+  font-size: 2.9em;
+  text-transform: uppercase;
+  color: transparent;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-text-stroke: 1px greenyellow;
+  transition: 0.6s;
+}
+.service:hover {
+  color: greenyellow;
+}
+.sSectionOne {
+  background: no-repeat url(../Images/09.webp);
+  background-size: cover;
+  background-position: bottom 20px;
+  width: 22%;
+  height: 50vh;
+  border-radius: 30px;
+
+
+}
+.sSectionTwo {
+  background: no-repeat url(../Images/10.webp);
+  background-size: cover;
+  width: 22%;
+  height: 50vh;
+  border-radius: 30px;
+}
+
+.sSectionThree {
+  background: no-repeat url(../Images/11.jpg);
+  background-size: cover;
+  width: 22%;
+  height: 50vh;
+  border-radius: 30px;
+}
+
+.sSectionFour {
+  background: no-repeat url(../Images/12.jpg);
+  background-size: cover;
+  width: 22%;
+  height: 50vh;
+  border-radius: 30px;
+}
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(14, 14, 14);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(172, 255, 47);
+}

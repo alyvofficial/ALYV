@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALYV</title>
+    <!-- JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js" defer></script>
+    <script src="./Assets/JS/database.js" defer></script>
+    <script src="./Assets/JS/navbar.js" defer></script>
+    <script src="./Assets/JS/typing.js" defer></script>
+    <script src="./Assets/JS/imageTranslate.js" defer></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Assets/Styles/fonts.css" />
+    <link rel="stylesheet" href="./Assets/Styles/style.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <nav>
+            <!-- Logo -->
+            <button data-text="Awesome" class="logo">
+                <span class="actual-text">&nbsp;ALYV&nbsp;</span>
+                <span class="hover-text" aria-hidden="true">&nbsp;ALYV&nbsp;</span>
+            </button>
+            <!-- Bar icon -->
+            <i class="fa-solid fa-bars" onclick="openNav()"></i>
+            <!-- Sidebar Menu -->
+            <div class="sidebarMenu" id="sideBar">
+                <ul id="navbar">
+                    <li>
+                        <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-regular fa-image"></i><a href="#" class="sideListA"
+                            onclick="openGallery()">GALLERY</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-laptop"></i><a href="#" class="sideListA"
+                            onclick="openProjects()">PROJECTS</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-user"></i><a href="#" class="sideListA" onclick="openAbout()">ABOUT</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-inbox"></i><a href="#" class="sideListA"
+                            onclick="openContact()">CONTACT</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-code-fork"></i><a href="#" class="sideListA"
+                            onclick="openServices()">SERVICES</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-wallet"></i><a href="#" class="sideListA"
+                            onclick="openPricing()">PRICING</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr />
+    </header>
+    <!-- Main Section -->
+    <main>
+        <div class="mainSection">
+            <!-- First line - main Section -->
+            <div class="mainSectionBox">
+                <div class="headlineOne">
+                    <h1>Discover the world of <span class="alyvText">ALYV</span></h1>
+                    <div class="paragraph">
+                        <p>I'm a</p>
+                        <p id="typing-animation"></p>
+                    </div>
+                    <button class="mainBtn" onclick="openAbout()">Learn More</button>
+                </div>
+
+                <img class="myImage" id="myImg" src="./Assets/Images/myImage.png" alt="Ali Aliyev"
+                    onmouseover="imgChanger()" onmouseout="imgReset()" />
+            </div>
+            <h2 class="service">Services</h2>
+            <div class="servicesSectionBox">
+                <div class="sSectionOne">
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-square-js"></i>
+                    <h3 class="developer">Website Design</h3>
+                    <p class="developerParagraph">Our web design service offers a specialized approach to create unique and impactful websites. We provide user-friendly and visually stunning web designs tailored to meet our clients' needs. By staying updated with the latest trends, we develop a strong online presence that reflects your brand effectively.</p>
+                </div>
+
+                <div class="sSectionTwo"></div>
+
+                <div class="sSectionThree"></div>
+
+                <div class="sSectionFour"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="gallerySection">
+        <a class="galleryCloseBtn" href="javascript:void(0)" onclick="closeGallery()">&times;</a>
+        <h2 class="galleryHeadline">Gallery</h2>
+    </div>
+
+    <div class="projectsSection">
+        <a class="projectsCloseBtn" href="javascript:void(0)" onclick="closeProjects()">&times;</a>
+        <h2 class="projectsHeadline">Projects</h2>
+    </div>
+
+    <div class="aboutSection">
+        <a class="aboutCloseBtn" href="javascript:void(0)" onclick="closeAbout()">&times;</a>
+        <h2 class="aboutHeadline">About</h2>
+    </div>
+
+    <div class="contactSection">
+        <a class="contactCloseBtn" href="javascript:void(0)" onclick="closeContact()">&times;</a>
+        <h2 class="contactHeadline">Contact</h2>
+    </div>
+
+    <div class="servicesSection">
+        <a class="servicesCloseBtn" href="javascript:void(0)" onclick="closeServices()">&times;</a>
+        <h2 class="servicesHeadline">Services</h2>
+    </div>
+
+    <div class="pricingSection">
+        <a class="pricingCloseBtn" href="javascript:void(0)" onclick="closePricing()">&times;</a>
+        <h2 class="pricingHeadline">PRICING</h2>
+    </div>
+
+    <script src="./Assets/JS/pictureAnimation.js"></script>
+</body>
+
+</html>
