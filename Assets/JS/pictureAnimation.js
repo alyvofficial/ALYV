@@ -3,4 +3,4 @@ function imgChanger () {
 }
 function imgReset () {
     document.getElementById("myImg").src = "./Assets/Images/myImage.png"
-}
+} 

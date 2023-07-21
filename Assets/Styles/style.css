@@ -342,6 +342,7 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 30px;
+  overflow-x: hidden;
 }
 
 /* Main Section Box */
@@ -404,8 +405,48 @@ h1:hover {
 .myImage {
   width: 370px;
 }
+/* Left Translation */
+.left {
+  transform: translateX(-400px);
+  animation: leftTranslate 0.8s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+@keyframes leftTranslate {
+  to {
+    transform: translateX(0);
+  }
+}
+/* Right Translation */
+.rightT {
+  transform: translateX(400px);
+  animation: rightOne 0.9s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+@keyframes rightOne {
+  to {
+    transform: translateX(0);
+  }
+}
+/* Top Translation */
+.topT {
+  transform: translateY(-100px);
+  animation: TopTranslation 0.9s cubic-bezier(0, 0.55, 0.45, 1) forwards;
+}
+@keyframes TopTranslation {
+  to {
+    transform: translateX(0);
+  }
+}
 
+/* Fade In Translation */
+.hover-effect {
+  opacity: 0;
+  animation: fade-in 0.8s ease-in forwards;
+}
 
+@keyframes fade-in {
+  to {
+      opacity: 1;
+  }
+}
 /* Main Button */
 .mainBtn {
   transition: 0.4s;
@@ -432,6 +473,10 @@ h1:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.serviceDiv {
+  height: 50px;
+  overflow-y: hidden;
 }
 .service {
   font-size: 2.9em;

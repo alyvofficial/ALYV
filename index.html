@@ -12,7 +12,6 @@
     <script src="./Assets/JS/database.js" defer></script>
     <script src="./Assets/JS/navbar.js" defer></script>
     <script src="./Assets/JS/typing.js" defer></script>
-    <script src="./Assets/JS/imageTranslate.js" defer></script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -27,12 +26,12 @@
         <!-- Navbar -->
         <nav>
             <!-- Logo -->
-            <button data-text="Awesome" class="logo">
+            <button data-text="Awesome" class="logo topT">
                 <span class="actual-text">&nbsp;ALYV&nbsp;</span>
                 <span class="hover-text" aria-hidden="true">&nbsp;ALYV&nbsp;</span>
             </button>
             <!-- Bar icon -->
-            <i class="fa-solid fa-bars" onclick="openNav()"></i>
+            <i class="fa-solid fa-bars hover-effect" onclick="openNav()"></i>
             <!-- Sidebar Menu -->
             <div class="sidebarMenu" id="sideBar">
                 <ul id="navbar">
@@ -72,20 +71,23 @@
         <div class="mainSection">
             <!-- First line - main Section -->
             <div class="mainSectionBox">
-                <div class="headlineOne">
-                    <h1>Discover the world of <span class="alyvText">ALYV</span></h1>
-                    <div class="paragraph">
+                <div class="headlineOne left">
+                    <h1 class="hover-effect">Discover the world of <span class="alyvText">ALYV</span></h1>
+                    <div class="paragraph hover-effect">
                         <p>I'm a</p>
                         <p id="typing-animation"></p>
                     </div>
-                    <button class="mainBtn" onclick="openAbout()">Learn More</button>
+                    <button class="mainBtn hover-effect" onclick="openAbout()">Learn More</button>
                 </div>
 
-                <img class="myImage" id="myImg" src="./Assets/Images/myImage.png" alt="Ali Aliyev"
+                <img class="myImage rightT" id="myImg" src="./Assets/Images/myImage.png" alt="Ali Aliyev"
                     onmouseover="imgChanger()" onmouseout="imgReset()" />
             </div>
-            <h2 class="service">Services</h2>
-            <div class="servicesSectionBox">
+            <div class="serviceDiv">
+                <h2 class="service topT">Services</h2>
+            </div>
+
+            <div class="servicesSectionBox hover-effect">
                 <div class="sSectionOne">
                     <i class="fa-brands fa-html5"></i>
                     <i class="fa-brands fa-css3"></i>
