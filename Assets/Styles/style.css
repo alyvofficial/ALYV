@@ -22,19 +22,21 @@ a {
   color: white;
   text-decoration: none;
 }
+
 header {
-  margin-bottom: 40px;
   position: sticky;
   top: 0;
   z-index: 998;
   background-color: rgb(14, 14, 14);
 }
+
 /* Navbar start */
 nav {
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 #navbar {
@@ -47,6 +49,32 @@ nav {
   margin: 0 auto;
   width: 90%;
 
+}
+
+/* Settings Box */
+#style1 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 0;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 37px;
+  left: 43px;
+  transition: 0.4s all;
+
+}
+
+#style1::-webkit-color-swatch {
+  border-radius: 0 20px 20px 0;
+  border: none;
+}
+
+#style1::-moz-color-swatch {
+  border-radius: 15px;
+  border: none;
 }
 
 .sidelist {
@@ -70,14 +98,8 @@ i {
 }
 
 .fa-bars {
-  position: absolute;
   color: greenyellow;
-  right: 30px;
   transition: 0.6s;
-}
-
-.fa-bars:hover {
-  transform: rotate(180deg);
 }
 
 /* Logo */
@@ -151,10 +173,6 @@ i {
   font-size: 2em;
   color: greenyellow;
   transition: 0.6s;
-}
-.closeBtn:hover {
-  transform: rotate(180deg);
-  filter: drop-shadow(0 0 20px greenyellow);
 }
 
 /* Gallery Section */
@@ -335,7 +353,9 @@ i {
 /* Main Section */
 main {
   height: 100vh;
+
 }
+
 .mainSection {
   display: flex;
   align-items: center;
@@ -343,17 +363,19 @@ main {
   flex-direction: column;
   gap: 30px;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* Main Section Box */
 
 .mainSectionBox {
-  height: 55vh;
+  height: 80vh;
   width: 92%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 h1 {
@@ -365,6 +387,7 @@ h1 {
   -webkit-text-stroke: 1px white;
   transition: 0.6s all;
 }
+
 h1:hover {
   color: white;
 }
@@ -372,6 +395,7 @@ h1:hover {
 .alyvText {
   color: transparent;
   -webkit-text-stroke: 1px #adff2f;
+  transition: 0.6s all;
 }
 
 /* Typing Animation */
@@ -386,7 +410,7 @@ h1:hover {
 
 #typing-animation:after {
   content: "|";
-  color: #adff2f;
+  color: var(--after-color);
 }
 
 /* Paragraph */
@@ -405,31 +429,37 @@ h1:hover {
 .myImage {
   width: 370px;
 }
+
 /* Left Translation */
 .left {
   transform: translateX(-400px);
   animation: leftTranslate 0.8s cubic-bezier(0, 0.55, 0.45, 1) forwards;
 }
+
 @keyframes leftTranslate {
   to {
     transform: translateX(0);
   }
 }
+
 /* Right Translation */
 .rightT {
   transform: translateX(400px);
   animation: rightOne 0.9s cubic-bezier(0, 0.55, 0.45, 1) forwards;
 }
+
 @keyframes rightOne {
   to {
     transform: translateX(0);
   }
 }
+
 /* Top Translation */
 .topT {
   transform: translateY(-100px);
   animation: TopTranslation 0.9s cubic-bezier(0, 0.55, 0.45, 1) forwards;
 }
+
 @keyframes TopTranslation {
   to {
     transform: translateX(0);
@@ -441,15 +471,15 @@ h1:hover {
   opacity: 0;
   animation: fade-in 0.8s ease-in forwards;
 }
-
 @keyframes fade-in {
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
+
 /* Main Button */
 .mainBtn {
-  transition: 0.4s;
+  transition: 0.4s all;
   width: 100px;
   height: 40px;
   border-radius: 10px;
@@ -457,70 +487,139 @@ h1:hover {
   background-color: greenyellow;
   color: #171718;
   letter-spacing: 1px;
-}
-
-.mainBtn:hover {
-  color: greenyellow;
-  background-color: #171718;
-
+  border: 1px solid greenyellow;
 }
 
 /* Services Section */
 .servicesSectionBox {
-  width: 92%;
-  height: 50vh;
+  width: 100%;
+  height: 55vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 50px;
+  background: no-repeat url(../Images/background.svg);
+
 }
+
 .serviceDiv {
   height: 50px;
   overflow-y: hidden;
 }
+
 .service {
   font-size: 2.9em;
   text-transform: uppercase;
   color: transparent;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  -webkit-text-stroke: 1px greenyellow;
+  -webkit-text-stroke: 1px #adff2f;
   transition: 0.6s;
 }
+
 .service:hover {
   color: greenyellow;
 }
+
 .sSectionOne {
-  background: no-repeat url(../Images/09.webp);
+  background-color: rgb(15, 15, 15);
   background-size: cover;
   background-position: bottom 20px;
   width: 22%;
   height: 50vh;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
 
+.developerParagraph {
+  width: 20vw;
+  color: rgb(255, 255, 255);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  line-height: 1.3em;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px;
+  font-size: 0.9em;
 
 }
+
+.fa-html5,
+.fa-css3,
+.fa-square-js {
+  color: rgb(255, 255, 255);
+  font-size: 2em;
+  padding: 0 5px;
+}
+
+.developer {
+  font-size: 2em;
+  color: rgb(255, 255, 255);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+.developerMore {
+  transition: 0.4s all;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: greenyellow;
+  color: rgb(14, 14, 14);
+  letter-spacing: 1px;
+  border: 1px solid greenyellow;
+}
+
+.developerMore:hover {
+  background-color: transparent;
+  border: 1px solid greenyellow;
+  color: greenyellow;
+}
+
 .sSectionTwo {
-  background: no-repeat url(../Images/10.webp);
+  background-color: rgb(15, 15, 15);
   background-size: cover;
+  background-position: bottom 20px;
   width: 22%;
   height: 50vh;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .sSectionThree {
-  background: no-repeat url(../Images/11.jpg);
+  background-color: rgb(15, 15, 15);
   background-size: cover;
+  background-position: bottom 20px;
   width: 22%;
   height: 50vh;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 .sSectionFour {
-  background: no-repeat url(../Images/12.jpg);
+  background-color: rgb(15, 15, 15);
   background-size: cover;
+  background-position: bottom 20px;
   width: 22%;
   height: 50vh;
   border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
 
@@ -538,5 +637,5 @@ h1:hover {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(172, 255, 47);
+  background-color: var(--scrollbar-thumb-color, greenyellow);
 }

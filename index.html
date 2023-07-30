@@ -13,6 +13,7 @@
     <script src="./Assets/JS/database.js" defer></script>
     <script src="./Assets/JS/navbar.js" defer></script>
     <script src="./Assets/JS/typing.js" defer></script>
+    <script src="./Assets/JS/color.js" defer></script>
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -24,42 +25,45 @@
 <body>
     <!-- Header -->
     <header>
+        
         <!-- Navbar -->
         <nav>
+            <i class="fa-solid fa-sliders colored2" onclick="openSettings()"></i>
+                <input type="color" value="#adff2f" id="style1">
             <!-- Logo -->
-            <button data-text="Awesome" class="logo topT">
+            <button data-text="Awesome" class="logo topT colored">
                 <span class="actual-text">&nbsp;ALYV&nbsp;</span>
                 <span class="hover-text" aria-hidden="true">&nbsp;ALYV&nbsp;</span>
             </button>
             <!-- Bar icon -->
-            <i class="fa-solid fa-bars hover-effect" onclick="openNav()"></i>
+            <i class="fa-solid fa-bars hover-effect colored2" onclick="openNav()"></i>
             <!-- Sidebar Menu -->
             <div class="sidebarMenu" id="sideBar">
                 <ul id="navbar">
                     <li>
-                        <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+                        <a href="javascript:void(0)" class="closeBtn colored2" onclick="closeNav()">&times;</a>
                     </li>
                     <li class="sidelist">
-                        <i class="fa-regular fa-image"></i><a href="" class="sideListA"
+                        <i class="fa-regular fa-image colored2"></i><a href="" class="sideListA"
                             onclick="openGallery()">GALLERY</a>
                     </li>
                     <li class="sidelist">
-                        <i class="fa-solid fa-laptop"></i><a href="" class="sideListA"
+                        <i class="fa-solid fa-laptop colored2"></i><a href="" class="sideListA"
                             onclick="openProjects()">PROJECTS</a>
                     </li>
                     <li class="sidelist">
-                        <i class="fa-solid fa-user"></i><a href="" class="sideListA" onclick="openAbout()">ABOUT</a>
+                        <i class="fa-solid fa-user colored2"></i><a href="" class="sideListA" onclick="openAbout()">ABOUT</a>
                     </li>
                     <li class="sidelist">
-                        <i class="fa-solid fa-inbox"></i><a href="" class="sideListA"
+                        <i class="fa-solid fa-inbox colored2"></i><a href="" class="sideListA"
                             onclick="openContact()">CONTACT</a>
                     </li>
                     <li class="sidelist">
-                        <i class="fa-solid fa-code-fork"></i><a href="" class="sideListA"
+                        <i class="fa-solid fa-code-fork colored2"></i><a href="" class="sideListA"
                             onclick="openServices()">SERVICES</a>
                     </li>
                     <li class="sidelist">
-                        <i class="fa-solid fa-wallet"></i><a href="" class="sideListA"
+                        <i class="fa-solid fa-wallet colored2"></i><a href="" class="sideListA"
                             onclick="openPricing()">PRICING</a>
                     </li>
                 </ul>
@@ -73,28 +77,31 @@
             <!-- First line - main Section -->
             <div class="mainSectionBox">
                 <div class="headlineOne left">
-                    <h1 class="hover-effect">Discover the world of <span class="alyvText">ALYV</span></h1>
+                    <h1 class="hover-effect">Discover the world of <span class="alyvText colored4" onmouseover="textOver(this)" onmouseout="textOut(this)">ALYV</span></h1>
                     <div class="paragraph hover-effect">
                         <p>I'm a</p>
-                        <p id="typing-animation"></p>
+                        <p id="typing-animation" class="colored2"></p>
                     </div>
-                    <button class="mainBtn hover-effect" onclick="openAbout()">Learn More</button>
+                    <button class="mainBtn hover-effect colored3" onclick="openAbout()" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Learn More</button>
                 </div>
 
                 <img class="myImage rightT" id="myImg" src="./Assets/Images/myImage.png" alt="Ali Aliyev"
                     onmouseover="imgChanger()" onmouseout="imgReset()" />
             </div>
             <div class="serviceDiv">
-                <h2 class="service topT">Services</h2>
+                <h2 class="service topT colored4" onmouseover="textOver(this)" onmouseout="textOut(this)">Services</h2>
             </div>
 
             <div class="servicesSectionBox hover-effect">
                 <div class="sSectionOne">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3"></i>
-                    <i class="fa-brands fa-square-js"></i>
+                    <div class="codingI">
+                        <i class="fa-brands fa-html5"></i>
+                        <i class="fa-brands fa-css3"></i>
+                        <i class="fa-brands fa-square-js"></i>
+                    </div>
                     <h3 class="developer">Website Design</h3>
                     <p class="developerParagraph">Our web design service offers a specialized approach to create unique and impactful websites. We provide user-friendly and visually stunning web designs tailored to meet our clients' needs. By staying updated with the latest trends, we develop a strong online presence that reflects your brand effectively.</p>
+                    <button class="mainBtn hover-effect colored3" onclick="openServices()" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Learn More</button>
                 </div>
 
                 <div class="sSectionTwo"></div>
@@ -107,34 +114,35 @@
     </main>
 
     <div class="gallerySection">
-        <a class="galleryCloseBtn" href="javascript:void(0)" onclick="closeGallery()">&times;</a>
+        <a class="galleryCloseBtn colored2" href="javascript:void(0)" onclick="closeGallery()">&times;</a>
         <h2 class="galleryHeadline">Gallery</h2>
     </div>
 
     <div class="projectsSection">
-        <a class="projectsCloseBtn" href="javascript:void(0)" onclick="closeProjects()">&times;</a>
+        <a class="projectsCloseBtn colored2" href="javascript:void(0)" onclick="closeProjects()">&times;</a>
         <h2 class="projectsHeadline">Projects</h2>
     </div>
 
     <div class="aboutSection">
-        <a class="aboutCloseBtn" href="javascript:void(0)" onclick="closeAbout()">&times;</a>
+        <a class="aboutCloseBtn colored2" href="javascript:void(0)" onclick="closeAbout()">&times;</a>
         <h2 class="aboutHeadline">About</h2>
     </div>
 
     <div class="contactSection">
-        <a class="contactCloseBtn" href="javascript:void(0)" onclick="closeContact()">&times;</a>
+        <a class="contactCloseBtn colored2" href="javascript:void(0)" onclick="closeContact()">&times;</a>
         <h2 class="contactHeadline">Contact</h2>
     </div>
 
     <div class="servicesSection">
-        <a class="servicesCloseBtn" href="javascript:void(0)" onclick="closeServices()">&times;</a>
+        <a class="servicesCloseBtn colored2" href="javascript:void(0)" onclick="closeServices()">&times;</a>
         <h2 class="servicesHeadline">Services</h2>
     </div>
 
     <div class="pricingSection">
-        <a class="pricingCloseBtn" href="javascript:void(0)" onclick="closePricing()">&times;</a>
+        <a class="pricingCloseBtn colored2" href="javascript:void(0)" onclick="closePricing()">&times;</a>
         <h2 class="pricingHeadline">PRICING</h2>
     </div>
+
 
     <script src="./Assets/JS/pictureAnimation.js"></script>
 </body>

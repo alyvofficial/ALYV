@@ -1,12 +1,10 @@
 // Sidebar menu function
 function openNav() {
   document.getElementById("sideBar").style.width = "250px";
-  document.querySelector(".fa-bars").style.display = "none";
 }
 
 function closeNav() {
   document.getElementById("sideBar").style.width = "0";
-  document.querySelector(".fa-bars").style.display = "block";
 }
 
 // Gallery Section function
@@ -73,6 +71,20 @@ function openPricing() {
 function closePricing() {
   document.querySelector(".pricingSection").style.width = "0";
   sessionStorage.removeItem("pricingSectionOpen");
+}
+
+// Settings Section
+function openSettings() {
+  // Div elementini seçiyoruz
+  const divElement = document.querySelector('#style1');
+  
+
+  // Eğer div'in height'i 100px ise, 0px yaparız; değilse 100px yaparız
+  if (divElement.style.width === '60px') {
+    divElement.style.width = '0';
+  } else {
+    divElement.style.width = '60px';
+  }
 }
 
 // Check if sections were open on page load
