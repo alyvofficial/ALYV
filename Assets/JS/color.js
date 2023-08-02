@@ -99,8 +99,17 @@ window.addEventListener('beforeunload', function () {
   localStorage.setItem('savedColor', input.value);
 });
 
-window.addEventListener('unload', function () {
+// Sayfa gizlendiğinde veya tarayıcıdan çıkarken tetiklenir
+window.addEventListener('pagehide', function () {
   localStorage.setItem('savedColor', input.value);
+});
+
+// Sayfanın görünürlüğü değiştiğinde tetiklenir (örneğin, kullanıcı bir sekmeden başka bir sekme geçerse)
+document.addEventListener('visibilitychange', function () {
+  // Eğer sayfa tamamen görünmez hale gelirse (hidden olduğunda), localStorage'a kayıt yapar
+  if (document.visibilityState === 'hidden') {
+    localStorage.setItem('savedColor', input.value);
+  }
 });
 
 // Sayfa yüklendiğinde, eğer daha önce bir renk seçilmişse onu yüklüyoruz.
