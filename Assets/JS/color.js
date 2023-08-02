@@ -3,27 +3,55 @@ const colors2 = document.querySelectorAll('.colored2');
 const colors3 = document.querySelectorAll('.colored3');
 const colors4 = document.querySelectorAll('.colored4');
 const colors5 = document.querySelectorAll('.colored5');
+const colors6 = document.querySelectorAll('.colored6');
 const input = document.getElementById('style1');
 
+function isTouchDevice() {
+  // Cihazın dokunmatik ekranı olup olmadığını kontrol etmek için matchMedia kullanılır
+  return matchMedia('(hover: none)').matches;
+}
+
 function mouseOver(element) {
-  element.style.border = `1px solid ${input.value}`;
-  element.style.color = 'white';
-  element.style.backgroundColor = 'transparent';
+  if (!isTouchDevice()) {
+    element.style.border = `1px solid ${input.value}`;
+    element.style.color = 'white';
+    element.style.backgroundColor = 'transparent';
+  }
 }
 
 function mouseOut(element) {
-  element.style.backgroundColor = input.value;
-  element.style.color = 'rgb(14, 14, 14)';
-  element.style.border = `1px solid ${input.value}`;
+  if (!isTouchDevice()) {
+    element.style.backgroundColor = input.value;
+    element.style.color = 'rgb(14, 14, 14)';
+    element.style.border = `1px solid ${input.value}`;
+  }
 }
 
 function textOver(element) {
-  element.style.setProperty('--text-stroke-color', input.value);
-  element.style.color = input.value;
+  if (!isTouchDevice()) {
+    element.style.setProperty('--text-stroke-color', input.value);
+    element.style.color = input.value;
+  }
 }
 
 function textOut(element) {
-  element.style.color = 'transparent';
+  if (!isTouchDevice()) {
+    element.style.color = 'transparent';
+  }
+}
+
+// Check if the animation has been played before
+const hasAnimationPlayed = localStorage.getItem('hasAnimationPlayed');
+
+// If the animation has not played before, run the animation
+if (!hasAnimationPlayed) {
+  const elementsWithHoverEffect = document.querySelectorAll('.hover-effect');
+  elementsWithHoverEffect.forEach((element) => {
+    element.style.animation = 'fade-in 0.8s ease-in forwards';
+  });
+
+  // Save to localStorage to prevent the animation from running again on subsequent page loads
+  localStorage.setItem('hasAnimationPlayed', true);
 }
 
 // #typing-animation:after stilini güncelleme fonksiyonu
@@ -51,6 +79,9 @@ input.oninput = function () {
   for (let i = 0; i < colors5.length; i++) {
     colors5[i].style.backgroundColor = input.value;
     colors5[i].style.border = `1px solid ${input.value}`;
+  }
+  for (let i = 0; i < colors6.length; i++) {
+    colors6[i].style.backgroundColor = input.value;
   }
 
   // #typing-animation:after stilini güncelle
@@ -97,6 +128,9 @@ window.onload = function () {
     for (let i = 0; i < colors5.length; i++) {
       colors5[i].style.backgroundColor = savedColor;
       colors5[i].style.border = `1px solid ${savedColor}`;
+    }
+    for (let i = 0; i < colors6.length; i++) {
+      colors6[i].style.backgroundColor = savedColor;
     }
 
     // #typing-animation:after stilini güncelle

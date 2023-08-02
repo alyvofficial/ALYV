@@ -1,0 +1,80 @@
+@media screen and (max-width:768px) {
+    i {
+        font-size: 1.2em;
+    }
+    .logo {
+        --fs-size: 2.2em;
+        color: var(--animation-color);
+        -webkit-text-stroke: 1px var(--animation-color);
+    }
+    .logo:hover .hover-text {
+        width: 0%;
+    }
+   .mainSectionBox {
+    flex: 1;
+    padding-top: 50px;
+    
+   }
+   h1 {
+    font-size: 2.1em;
+    width: 50%;
+    color: white;
+    -webkit-text-stroke: transparent;
+   }
+   .ImgDiv {
+    width: 54%;
+    position: relative;
+    right: 20px;
+   }
+   .imgBox {
+    width: 200px;
+    height: 200px;
+   }
+   .myImage {
+    width: 300px;
+    left: -40px
+
+   }
+   .mainBtn {
+    width: 80px;
+    height: 40px;
+    font-size: 0.7em;
+   }
+   .paragraph p {
+    font-size: 0.9em;
+   }
+   #typing-animation {
+    width: 60%;
+    font-size: 0.9em;
+    white-space: nowrap;
+   }
+   .service {
+    font-size: 2em;
+   }
+   .servicesSectionBox {
+    background: no-repeat url(../Images/background-media.svg);
+    background-size: cover;
+    height: 1300px;
+    padding: 0;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+   }
+   .sSectionOne, .sSectionTwo, .sSectionThree {
+    width: 85%;
+    background-color: rgb(16, 16, 16);
+    height: 85%;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 15px 0;
+   }
+   .developer {
+    font-size: 1.6em;
+    text-align: center;
+   }
+   .developerParagraph {
+    width: inherit;
+    font-size: 0.9em;
+    height: 240px;
+   }
+}

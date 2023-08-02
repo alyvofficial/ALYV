@@ -20,16 +20,17 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./Assets/Styles/fonts.css" />
     <link rel="stylesheet" href="./Assets/Styles/style.css" />
+    <link rel="stylesheet" href="./Assets/Styles/mediaQueries.css">
 </head>
 
 <body>
     <!-- Header -->
     <header>
-        
+
         <!-- Navbar -->
         <nav>
             <i class="fa-solid fa-sliders colored2" onclick="openSettings()"></i>
-                <input type="color" value="#adff2f" id="style1">
+            <input type="color" value="#adff2f" id="style1">
             <!-- Logo -->
             <button data-text="Awesome" class="logo topT colored">
                 <span class="actual-text">&nbsp;ALYV&nbsp;</span>
@@ -52,7 +53,8 @@
                             onclick="openProjects()">PROJECTS</a>
                     </li>
                     <li class="sidelist">
-                        <i class="fa-solid fa-user colored2"></i><a href="" class="sideListA" onclick="openAbout()">ABOUT</a>
+                        <i class="fa-solid fa-user colored2"></i><a href="" class="sideListA"
+                            onclick="openAbout()">ABOUT</a>
                     </li>
                     <li class="sidelist">
                         <i class="fa-solid fa-inbox colored2"></i><a href="" class="sideListA"
@@ -77,16 +79,23 @@
             <!-- First line - main Section -->
             <div class="mainSectionBox">
                 <div class="headlineOne left">
-                    <h1 class="hover-effect">Discover the world of <span class="alyvText colored4" onmouseover="textOver(this)" onmouseout="textOut(this)">ALYV</span></h1>
+                    <h1 class="hover-effect">Discover the world of <span class="alyvText colored2">ALYV</span></h1>
                     <div class="paragraph hover-effect">
                         <p>I'm a</p>
                         <p id="typing-animation" class="colored2"></p>
                     </div>
-                    <button class="mainBtn hover-effect colored3" onclick="openAbout()" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Learn More</button>
+                    <button class="mainBtn hover-effect colored3" onclick="openAbout()" onmouseover="mouseOver(this)"
+                        onmouseout="mouseOut(this)">Learn More</button>
                 </div>
 
-                <img class="myImage rightT" id="myImg" src="./Assets/Images/myImage.png" alt="Ali Aliyev"
-                    onmouseover="imgChanger()" onmouseout="imgReset()" />
+                <div class="ImgDiv rightT">
+                    <div class="imgBox colored6">
+                        <img class="myImage" src="./Assets/Images/me.png" alt="Ali Aliyev"/>
+                    </div>                      
+                </div>
+
+
+
             </div>
             <div class="serviceDiv">
                 <h2 class="service topT colored4" onmouseover="textOver(this)" onmouseout="textOut(this)">Services</h2>
@@ -94,21 +103,38 @@
 
             <div class="servicesSectionBox hover-effect">
                 <div class="sSectionOne">
-                    <div class="codingI">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3"></i>
-                        <i class="fa-brands fa-square-js"></i>
-                    </div>
+
                     <h3 class="developer">Website Design</h3>
-                    <p class="developerParagraph">Our web design service offers a specialized approach to create unique and impactful websites. We provide user-friendly and visually stunning web designs tailored to meet our clients' needs. By staying updated with the latest trends, we develop a strong online presence that reflects your brand effectively.</p>
-                    <button class="mainBtn hover-effect colored3" onclick="openServices()" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Learn More</button>
+                    <p class="developerParagraph">Our website service offers a specialized approach to create unique and
+                        impactful websites. We provide user-friendly and visually stunning web designs tailored to meet
+                        our clients' needs. By staying updated with the latest trends, we develop a strong online
+                        presence that reflects your brand effectively.</p>
+                    <button class="mainBtn hover-effect colored3" onclick="openServices()" onmouseover="mouseOver(this)"
+                        onmouseout="mouseOut(this)">Learn More</button>
                 </div>
 
-                <div class="sSectionTwo"></div>
+                <div class="sSectionTwo">
+                    <h3 class="developer">Graphic Design</h3>
+                    <p class="developerParagraph">Our website service offers exceptional graphic and motion design
+                        solutions to our esteemed clients. We specialize in photo editing and digital invitation
+                        creation, ensuring that your special moments are captured and presented in the most captivating
+                        way possible. Trust us to bring your vision to life with our expert design skills.</p>
+                    <button class="mainBtn hover-effect colored3" onclick="openServices()" onmouseover="mouseOver(this)"
+                        onmouseout="mouseOut(this)">Learn More</button>
 
-                <div class="sSectionThree"></div>
+                </div>
 
-                <div class="sSectionFour"></div>
+                <div class="sSectionThree">
+                    <h3 class="developer">3D Design</h3>
+                    <p class="developerParagraph">Our website service pack provides customers with exceptional 3D design
+                        and social media marketing services. Additionally, we offer the creation of engaging social
+                        media posts to enhance your online presence. Trust us to deliver high-quality solutions that
+                        will elevate your brand and help you achieve your business goals.</p>
+                    <button class="mainBtn hover-effect colored3" onclick="openServices()" onmouseover="mouseOver(this)"
+                        onmouseout="mouseOut(this)">Learn More</button>
+
+                </div>
+
             </div>
         </div>
     </main>

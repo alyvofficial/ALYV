@@ -109,9 +109,6 @@ i {
   background: transparent;
   padding: 0;
   border: none;
-}
-
-.logo {
   --text-stroke-color: greenyellow;
   --animation-color: greenyellow;
   --fs-size: 2.5em;
@@ -380,21 +377,16 @@ main {
 
 h1 {
   margin-bottom: 20px;
-  color: transparent;
+  color: white;
   text-transform: uppercase;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 3em;
-  -webkit-text-stroke: 1px white;
   transition: 0.6s all;
 }
 
-h1:hover {
-  color: white;
-}
 
 .alyvText {
-  color: transparent;
-  -webkit-text-stroke: 1px #adff2f;
+  color: greenyellow;
   transition: 0.6s all;
 }
 
@@ -426,8 +418,23 @@ h1:hover {
 }
 
 /* My Image */
+.ImgDiv {
+  position: static;
+
+}
+.imgBox {
+  height: 400px;
+  width: 400px;
+  background-color: #adff2f;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
 .myImage {
-  width: 370px;
+  width: 620px;
+  position: absolute;
+  bottom: 0;
+  left: -100px;
 }
 
 /* Left Translation */
@@ -468,7 +475,7 @@ h1:hover {
 
 /* Fade In Translation */
 .hover-effect {
-  opacity: 0;
+  opacity: 1;
   animation: fade-in 0.8s ease-in forwards;
 }
 @keyframes fade-in {
@@ -500,6 +507,7 @@ h1:hover {
   justify-content: space-between;
   padding: 0 50px;
   background: no-repeat url(../Images/background.svg);
+  
 
 }
 
@@ -517,14 +525,8 @@ h1:hover {
   transition: 0.6s;
 }
 
-.service:hover {
-  color: greenyellow;
-}
-
 .sSectionOne {
   background-color: rgb(15, 15, 15);
-  background-size: cover;
-  background-position: bottom 20px;
   width: 22%;
   height: 50vh;
   border-radius: 30px;
@@ -537,6 +539,7 @@ h1:hover {
 
 .developerParagraph {
   width: 20vw;
+  height: 30vh;
   color: rgb(255, 255, 255);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   line-height: 1.3em;
@@ -547,38 +550,14 @@ h1:hover {
 
 }
 
-.fa-html5,
-.fa-css3,
-.fa-square-js {
-  color: rgb(255, 255, 255);
-  font-size: 2em;
-  padding: 0 5px;
-}
-
 .developer {
   font-size: 2em;
   color: rgb(255, 255, 255);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.developerMore {
-  transition: 0.4s all;
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
-  border: none;
-  background-color: greenyellow;
-  color: rgb(14, 14, 14);
-  letter-spacing: 1px;
-  border: 1px solid greenyellow;
-}
-
-.developerMore:hover {
-  background-color: transparent;
-  border: 1px solid greenyellow;
-  color: greenyellow;
-}
 
 .sSectionTwo {
   background-color: rgb(15, 15, 15);

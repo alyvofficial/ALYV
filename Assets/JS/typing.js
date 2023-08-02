@@ -1,5 +1,5 @@
 const element = document.querySelector("#typing-animation");
-const texts = [" Graphic Designer", "Front-End Developer", "Freelancer", "3D artist"];
+const texts = [" Graphic Designer", "Website Designer", "Freelancer", "3D Designer", "UX/UI Designer"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
