@@ -187,6 +187,7 @@ i {
 
 .galleryCloseBtn {
   position: absolute;
+  z-index: 1001;
   font-size: 3em;
   top: 20px;
   right: 30px;

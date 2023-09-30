@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <script type="application/ld+json">
+        {
+            "@context": "https://alyvofficial.net/",
+            "@type": "Portfolio",
+            "name": "ALYV Portfolio",
+            "author": {
+                "@type": "Person",
+                "name": "Ali ALiyev"
+            },
+            "datePublished": "2023-08-01",
+            "description": "A Portfolio Website and Services for customers.",
+            "prepTime": "2M"
+        }
+    </script>
+    <link rel="icon" type="image/x-icon" href="./Assets/Images/favicon.png">
+    <!-- JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js" defer></script>
+    <script src="../Assets/JS/database.js" defer></script>
+    <script src="../Assets/JS/navbar.js" defer></script>
+    <script src="../Assets/JS/typing.js" defer></script>
+    <script src="../Assets/JS/color.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Assets/Styles/fonts.css" />
+    <link rel="stylesheet" href="../Assets/Styles/style.css" />
+    <link rel="stylesheet" href="../Assets/Styles/mediaQueries.css">
+</head>
+
+<body>
+    <header>
+
+        <!-- Navbar -->
+        <nav>
+            <i class="fa-solid fa-sliders colored2" onclick="openSettings()"></i>
+            <input type="color" value="#adff2f" id="style1">
+            <!-- Logo -->
+            <button data-text="Awesome" class="logo topT colored">
+                <span class="actual-text">&nbsp;ALYV&nbsp;</span>
+                <span class="hover-text" aria-hidden="true">&nbsp;ALYV&nbsp;</span>
+            </button>
+            <!-- Bar icon -->
+            <i class="fa-solid fa-bars hover-effect colored2" onclick="openNav()"></i>
+            <!-- Sidebar Menu -->
+            <div class="sidebarMenu" id="sideBar">
+                <ul id="navbar">
+                    <li>
+                        <a href="javascript:void(0)" class="closeBtn colored2" onclick="closeNav()">&times;</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-regular fa-image colored2"></i><a href="./gallery.html"
+                            class="sideListA">GALLERY</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-laptop colored2"></i><a href="./projects.html"
+                            class="sideListA">PROJECTS</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-user colored2"></i><a href="./about.html"
+                            class="sideListA">ABOUT</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-inbox colored2"></i><a href="./contact.html"
+                            class="sideListA">CONTACT</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-code-fork colored2"></i><a href="./services.html"
+                            class="sideListA">SERVICES</a>
+                    </li>
+                    <li class="sidelist">
+                        <i class="fa-solid fa-wallet colored2"></i><a href="./pricing.html"
+                            class="sideListA">PRICING</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <hr />
+    </header>
+</body>
+
+</html>
